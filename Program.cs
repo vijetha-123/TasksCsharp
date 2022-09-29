@@ -33,7 +33,6 @@ class methods_functn
         Console.WriteLine("Enter employee role:");
         string emp_role = Console.ReadLine();
         m.Employee_disp(emp_id, emp_name, emp_role);
-
     }
     public static void Sum(int a, int b)
     {
@@ -48,23 +47,17 @@ class methods_functn
             int sub1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter subject" + i + " marks:" + sub1);
             sum += sub1;
-
         }
         Console.WriteLine("total:" + sum);
         if (sum > 80)
         {
-            Console.WriteLine("GRADE A");
-        }
+            Console.WriteLine("GRADE A"); }
         else
         {
-            Console.WriteLine("GRADE B");
-        }
-
+            Console.WriteLine("GRADE B");}
     }
-
     public void Employee_disp(int a, string b, string c)
     {
-
         Console.WriteLine("Employee id:" + a);
         Console.WriteLine("Employee name:" + b);
         Console.WriteLine("Empolyee role:" + c);
