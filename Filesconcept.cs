@@ -15,7 +15,6 @@ namespace TasksCsharp
             FileStream fs=fileinfo.Open(FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.ReadWrite);
             StreamWriter writer=new StreamWriter(fs);
             writer.WriteLine("MULTIPLICATION TABLE:");
-
             try
             {
                 foreach (int i in number)
@@ -26,7 +25,6 @@ namespace TasksCsharp
                     }
                     writer.WriteLine("-----------------------------------------------------");
                 }
-
             }
             catch (FileNotFoundException ex)
             {
@@ -36,25 +34,18 @@ namespace TasksCsharp
             {
                 writer.Close();
                 fs.Close();
-
             }
-
             return 0;
-
-
         }
         public static void Mul_read(params int[] number)
         {
             FileInfo fileInfo = new FileInfo(@"C:\Users\ei13081\Documents\filesconcept\Multi_table.txt");
             FileStream fs = fileInfo.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
             StreamReader reader=new StreamReader(fs);
-           
             try
             {
                string contents=reader.ReadToEnd();
                 Console.WriteLine(contents);
-             
-
             }
             catch (FileNotFoundException ex)
             {
@@ -77,7 +68,6 @@ namespace TasksCsharp
                 writer.WriteLine("copied contents");
                 string des= @"C:\Users\ei13081\Documents\filesconcept\Copied_file.txt";
                 File.Copy(path, des,true);
-              
             }
             catch (FileNotFoundException ex)
             {
@@ -96,7 +86,6 @@ namespace TasksCsharp
             File_Copy();
             //File.Move(@"C:\Users\ei13081\Documents\filesconcept\MOVED_file.txt", @"C:\Users\ei13081\Documents\filesconcept\move_op.txt");
             File.Delete(@"C:\Users\ei13081\Documents\filesconcept\deleting file.txt");
-          
             Console.WriteLine("First line from the file is:");
             string[] contents;
             contents = File.ReadAllLines(@"C:\Users\ei13081\Documents\filesconcept\Multi_table.txt");
@@ -109,7 +98,6 @@ namespace TasksCsharp
                 Count ++;
             }
             Console.WriteLine("Total count of lines:"+Count);
-
         }
     }
 }
